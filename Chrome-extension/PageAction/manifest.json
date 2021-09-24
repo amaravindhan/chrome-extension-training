@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Page Action",
+    "version": "1.0",
+    "description": "Page Action Example - which changes style on specfic page",
+    "icons" : {
+        "128": "icon128.png",
+        "48": "icon48.png",
+        "16": "icon16.png"
+    },
+    "page_action": {
+        "default_icon": "icon16.png",
+        "default_popup": "popup.html",
+        "default_title": "Page Action Style"
+    },
+    "background": {
+        "scripts": ["js/eventPage.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://developer.chrome.com/*"],
+            "js": ["js/content.js", "js/jquery-3.6.0.min.js"],
+            "css": ["css/content.css"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "https://developer.chrome.com/"
+    ]
+}

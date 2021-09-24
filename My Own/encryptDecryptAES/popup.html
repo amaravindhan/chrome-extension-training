@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/aes.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/popup.js"></script>
+    <title>AES Encrypt & Decrypt</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Encrypt & Decrypt</h1>
+      <div class="mb-3">
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            name="option"
+            id="encrypt"
+            class="form-check-input"
+            value="enc"
+            checked
+          />
+          <label class="form-check-label" for="encrypt"> Encrypt </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            name="option"
+            id="decrypt"
+            value="dec"
+            class="form-check-input"
+          />
+          <label class="form-check-label" for="decrypt"> Decrypt </label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <textarea
+          id="inputText"
+          class="form-control"
+          placeholder="Value to encrypt or decrypt..."
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="salt"
+          placeholder="Password (Optional)"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="submit"
+          id="submit"
+          class="btn btn-success center"
+          value="Proceed"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <textarea
+          class="form-control inputClipboard"
+          id="output"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="Copy to Clipboard"
+          data-clipboard-target="#output"
+          readonly
+        ></textarea>
+      </div>
+    </div>
+  </body>
+</html>

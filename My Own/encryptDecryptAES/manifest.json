@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "AES Encrypt & Decrypt",
+    "version": "1.0",
+    "description": "Encrypt and Decrypt using AES 256Bit",
+    "icons": {
+        "128": "images/icon128.png",
+        "32": "images/icon32.png",
+        "16": "images/icon16.png"
+    },
+    "browser_action": {
+        "default_icon": "images/icon16.png",
+        "default_popup": "popup.html"
+    },
+    "background":{
+        "scripts": ["js/eventPage.js", "js/aes.js"],
+        "persistant": false
+    },
+    "content_scripts":[
+        {
+            "matches": ["https://*/*"],
+            "js": ["js/content.js", "js/clipboard.min.js"]
+        }
+    ],
+    "permissions":[
+        "tabs",
+        "notifications",
+        "contextMenus",
+        "https://*/"
+    ]
+}

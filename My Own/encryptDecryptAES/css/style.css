@@ -1,0 +1,14 @@
+body {
+    min-width: 250px;
+    min-height: 250px;
+}
+
+.center {
+    display: block !important;
+    margin: auto !important;
+}
+
+.inputClipboard {
+    cursor: pointer;
+    display: none;
+}
